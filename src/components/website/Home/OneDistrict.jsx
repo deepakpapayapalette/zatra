@@ -65,7 +65,7 @@ const OneDistrict = () => {
       img: slide5,
     },
   ];
- 
+
   const settings = {
     dots: false,
     infinite: true,
@@ -82,13 +82,13 @@ const OneDistrict = () => {
   };
   return (
     <>
-      <section className="space-top one-district-section">
-        <div className="grid grid-cols-1 lg:grid-cols-5 md:gap-0 gap-5 ">
-          <div className="left-slider-one-district md:col-span-2 relative bg-websecondary">
+      <section className="space-top one-district-section relative">
+        <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-0 gap-5 ">
+          <div className="left-slider-one-district  relative bg-websecondary">
             <Slider {...settings}>
               {slideData.map((slide) => (
                 <div key={slide.id} className=" relative" >
-                  <div style={{ backgroundImage: `url(${slide.img})` }} className=" w-full md:min-h-[400px] bg-cover ">
+                  <div style={{ backgroundImage: `url(${slide.img})` }} className=" w-full min-h-[400px] bg-cover ">
 
                     {/* <div className="absolute bottom-0 left-0 right-0 top-0  "></div> */}
                     {/* <img
@@ -113,7 +113,7 @@ const OneDistrict = () => {
 
             </Slider>
           </div>
-          <div className="right-content-one-district  bg-websecondary py-8  px-5 md:px-16  md:col-span-3 h-[100%] ">
+          <div className="right-content-one-district  bg-websecondary py-8  px-5 md:px-16   h-[100%] ">
             <h2 className='lg:text-4xl text-xl pb-4 text-webprimary'>One District One Product  (ODOP)</h2>
             <p className='text-webPara'>One District One Product (ODOP) is a government initiative that identifies and promotes one unique product from each district of India—ranging from agricultural produce and processed foods to handicrafts and handlooms—with the aim of boosting local economy, generating employment, preserving traditional skills, and enhancing both domestic and global market reach through branding, marketing, financial support, and export promotion.</p>
             <button className="zatra-btn mt-6 ">Explore All Product</button>

@@ -63,7 +63,7 @@ const ZataraPackages = () => {
       <section>
         <div className='md:mt-0 mt-6'>
           <div className='container'>
-            <h2 className="text-2xl md:text-4xl font-bold text-webprimary">ZATRA Packages</h2>
+            <h2 className="text-2xl md:text-4xl font-semibold text-webprimary">ZATRA Packages</h2>
             <div className="mt-6">
               <Carousel
                 responsive={responsive}

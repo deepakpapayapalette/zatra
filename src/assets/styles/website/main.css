@@ -1,8 +1,7 @@
 /* Default (extra small, <576px) */
 .container {
-  /* width: 100%; */
   max-width: 100%;
-  /* margin: 0 auto; */
+  margin: 0 auto;
 }
 
 /* Small (≥576px) */

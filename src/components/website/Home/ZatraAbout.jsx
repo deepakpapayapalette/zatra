@@ -1,5 +1,4 @@
 import React from "react";
-import "./ZatraAbout.css";
 import TempleImage1 from "../../../assets/images/website/img1.png"
 import TempleImage from "../../../assets/images/website/zataraAbout.png"
 import TajPeacockImage from "../../../assets/images/website/taj_peacock.png"
@@ -16,16 +15,15 @@ const ZatraAbout = () => (
           </p>
           <button className="zatra-btn ">Know More</button>
         </div>
-        <div className="flex md:justify-end md:items-start zatra-images">
-          <div className="relative flex flex-col" style={{ paddingLeft: '60px' }}>
+        <div className="flex md:justify-end items-start min-w-[320px] relative md:h-[320px] md:mb-0 mb-[45px]">
+          <div className="relative flex flex-col md:pl-[50px]" >
             <img
               src={TempleImage}
               alt="Temple"
-              className=" w-full h-auto object-cover mb-[-30px] md:mb-0  zatra-top-img z-0"
+              className=" w-full h-auto object-cover mb-[-30px] md:mb-0  z-0"
             />
-            <div className="w-full absolute   bg-webprimary text-white px-8 py-6 rounded-bl-[50px] rounded-tr-3xl shadow-lg zatra-stats-box z-10">
-              <div className="flex justify-between">
-
+            <div className="w-full md:absolute   bg-webprimary text-white px-8 py-6 rounded-bl-[50px]  shadow-lg zatra-stats-box z-10 left-[25px] top-[100%]  md:top-auto sm:bottom-[-6px]  min-w-[180px] min-h-[100px]">
+              <div className="flex justify-between"> 
                 <div>
                   <div className="text-2xl font-bold">300K</div>
                   <div className="text-sm">Visitors Visit</div>
@@ -40,21 +38,13 @@ const ZatraAbout = () => (
             <img
               src={TajPeacockImage}
               alt="Taj Mahal and Peacock"
-              className="absolute right-[-30px]  md:bottom-[60px]  w-[240px] h-auto object-cover  border-white zatra-bottom-img z-20"
+              className="absolute  md:right-[-30px] right-0   md:bottom-[60px]  w-[240px] h-auto object-cover  border-white zatra-bottom-img z-20"
             />
-
-
           </div>
-          {/* <div className=" flex flex-col">
-            <img
-              src={TempleImage1}
-              alt="Temple"
-              className="rounded-tl-3xl max-w-full h-auto object-cover "
-            />
-          </div> */}
         </div>
       </div>
     </div>
+
   </section>
 );
 
