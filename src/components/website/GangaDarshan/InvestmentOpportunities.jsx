@@ -68,7 +68,7 @@ const InvestmentOpportunities = () => {
       <section className='space-top'>
         <div className="container">
           <h2 className="text-2xl md:text-4xl font-semibold  mb-3">
-            Major Exports
+            Investment Opportunities
           </h2>
           <div className="mt-5">
 
@@ -80,16 +80,27 @@ const InvestmentOpportunities = () => {
               draggable
               showDots={false}
               containerClass="pb-2 pt-4"
-              itemClass="ps-0 pt-2 pe-4"
+              itemClass="ps-1 pt-2 pe-4"
               arrows={false}
               renderButtonGroupOutside={false}
               partialVisible
             >
 
               {slideData.map((item, index) => (
-                <SingleCard key={index} data={item} buttonText={buttonText} />
-              ))}
+                <div className='border border-gray-300 p-4 rounded-2xl' key={index}>
+                  <h2 className='text-xl md:text-2xl font-semibold pb-2'>Renewable Energy Sector</h2>
+                  <p className='text-webPara pb-3 '>Government Schemes</p>
+                  <ul className='mb-4 text-webPara list-disc list-inside' >
+                    <li className='text-webPara'>Market demand (domestic + export)</li>
+                    <li className='text-webPara'>Special schemes ODOP</li>
+                  </ul>
+                  <button className='zatra-btn-fill w-full px-3'>
+                    Explore  Scheme
+                  </button>
 
+
+                </div>
+              ))}
             </Carousel>
           </div>
         </div>

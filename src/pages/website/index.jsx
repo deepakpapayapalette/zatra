@@ -10,6 +10,7 @@ import HeroSlider from '../../components/website/Home/HeroSlider'
 import Hero from '../../components/website/Home/Hero'
 import SearchTabs from '../../components/website/Home/SearchTabs'
 import ZataraPackages from '../../components/website/Home/ZataraPackages'
+import OneDistrict2 from '../../components/website/Home/OneDistrict2'
 
 
 const LandingPage = () => {
@@ -21,7 +22,8 @@ const LandingPage = () => {
       <SearchTabs />
       <ZataraPackages />
       <ZatraAbout />
-      <OneDistrict />
+      {/* <OneDistrict /> */}
+      <OneDistrict2 />
       <div className='space-top'>
       </div>
     </>

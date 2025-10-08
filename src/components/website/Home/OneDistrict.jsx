@@ -83,6 +83,7 @@ const OneDistrict = () => {
   return (
     <>
       <section className="space-top one-district-section relative">
+
         <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-0 gap-5 ">
           <div className="left-slider-one-district  relative bg-websecondary">
             <Slider {...settings}>

@@ -18,6 +18,8 @@ import MajorIndustries from '../../components/website/GangaDarshan/MajorIndustri
 import EducationalInstitutions from '../../components/website/GangaDarshan/EducationalInstitutions'
 import Handicrafts from '../../components/website/GangaDarshan/Handicrafts'
 import Ads from '../../components/website/GangaDarshan/Ads'
+import InvestmentOpportunities from '../../components/website/GangaDarshan/InvestmentOpportunities'
+import EmergencyHelplines from '../../components/website/GangaDarshan/EmergencyHelplines'
 
 
 const GangaDarshan = () => {
@@ -43,6 +45,8 @@ const GangaDarshan = () => {
       <EducationalInstitutions />
       <Handicrafts />
       <Ads />
+      <InvestmentOpportunities />
+      <EmergencyHelplines />
     </div>
   )
 }

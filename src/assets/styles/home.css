@@ -26,7 +26,7 @@
   }
 }
 
-.one-district-section button.slick-arrow.slick-prev {
+/* .one-district-section button.slick-arrow.slick-prev {
   position: absolute;
   z-index: 2;
   top: 85%;
@@ -37,7 +37,7 @@
   position: absolute;
   right: 40px;
   top: 85%;
-}
+} */
 
 .theme-shadow {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
