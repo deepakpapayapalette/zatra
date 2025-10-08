@@ -20,6 +20,10 @@ import Handicrafts from '../../components/website/GangaDarshan/Handicrafts'
 import Ads from '../../components/website/GangaDarshan/Ads'
 import InvestmentOpportunities from '../../components/website/GangaDarshan/InvestmentOpportunities'
 import EmergencyHelplines from '../../components/website/GangaDarshan/EmergencyHelplines'
+import LocalAuthorities from '../../components/website/GangaDarshan/LocalAuthorities'
+import LocalRepresentative from '../../components/website/GangaDarshan/LocalRepresentative'
+import Localinfluencers from '../../components/website/GangaDarshan/Localinfluencers'
+import LocalArtisans from '../../components/website/GangaDarshan/LocalArtisans'
 
 
 const GangaDarshan = () => {
@@ -47,6 +51,10 @@ const GangaDarshan = () => {
       <Ads />
       <InvestmentOpportunities />
       <EmergencyHelplines />
+      <LocalAuthorities />
+      <LocalRepresentative />
+      <Localinfluencers />
+      <LocalArtisans />
     </div>
   )
 }
