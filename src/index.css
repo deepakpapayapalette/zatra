@@ -229,7 +229,12 @@ h6 {
 }
 
 .zatra-btn-fill:hover {
-  background: transparent;
-  color: var(--web-primary);
+  background: #006296;
+  color: white;
   border-color: var(--web-primary);
+}
+
+.react-multi-carousel-dot--active button {
+  background-color: var(--web-primary) !important;
+  border-color: var(--web-primary) !important;
 }

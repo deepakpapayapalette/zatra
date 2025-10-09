@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom'
 import LandingPage from '../pages/website/index'
 import ErrorPage from '../pages/ErrorPage'
 import GangaDarshan from '../pages/website/GangaDarshan'
+import Religious from '../pages/website/Religious'
 
 const WebsiteRoutes = () => {
   return (
@@ -11,6 +12,7 @@ const WebsiteRoutes = () => {
       <Route path="/" element={<WebsiteLayout />}>
         <Route index element={<LandingPage />} />
         <Route path="ganga-darshan" element={<GangaDarshan />} />
+        <Route path="religious" element={<Religious />} />
         {/* Catch-all */}
         <Route path="*" element={<ErrorPage />} />
       </Route>
