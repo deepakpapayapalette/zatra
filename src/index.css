@@ -234,7 +234,20 @@ h6 {
   border-color: var(--web-primary);
 }
 
-.react-multi-carousel-dot--active button {
+.container .react-multi-carousel-dot--active button {
   background-color: var(--web-primary) !important;
   border-color: var(--web-primary) !important;
+}
+
+.react-multi-carousel-dot button {
+  background-color: #bfc3c5;
+  border-color: #bfc3c5 !important;
+}
+
+.react-multi-carousel-dot-list {
+  bottom: 0;
+}
+
+.react-multi-carousel-track {
+  top: -8px;
 }

@@ -238,18 +238,19 @@ const cardsData = [
     img: slide1
   },
 ]
-const ReligiousTabs = () => {
+const ReligiousTabs = ({ activeCity }) => {
 
 
-  const [activeCategory, setActiveCategory] = useState("New Delhi");
-  const filteredCards = cardsData.filter((card) => card.category === activeCategory);
+  // const [activeCity, setactiveCity] = useState("New Delhi");
+  const filteredCards = cardsData.filter((card) => card.category === activeCity);
+  console.log(filteredCards, "activeCity")
 
-  const categories = [
-    { key: "New Delhi", label: "New Delhi" },
-    { key: "Gurugram", label: "Gurugram" },
-    { key: "Lucknow", label: "Lucknow" },
-    { key: "Kushinagar", label: "Kushinagar" },
-  ];
+  // const categories = [
+  //   { key: "New Delhi", label: "New Delhi" },
+  //   { key: "Gurugram", label: "Gurugram" },
+  //   { key: "Lucknow", label: "Lucknow" },
+  //   { key: "Kushinagar", label: "Kushinagar" },
+  // ];
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -271,26 +272,15 @@ const ReligiousTabs = () => {
 
   return (
     <>
-      <section className='space-top relative'>
-        <div className="container">
+      <section className=' relative'>
+        <div className="pt-5 ">
           <div className='flex  items-center mb-4'>
-            <div className='bg-white border text-webprimary p-3 rounded-full shadow-card me-4 flex items-center justify-center'>
+            {/* <div className='bg-white border text-webprimary p-3 rounded-full shadow-card me-4 flex items-center justify-center'>
               <GiByzantinTemple size={25} />
-            </div>
+            </div> */}
             <h2 className='text-xl md:text-3xl  mb-0 pb-0'>Religious/ Pilgrimage Sites</h2>
           </div>
-          <div className="flex flex-wrap items-center ">
-            <div className=" medical-tab-buttons mb-4 flex flex-wrap gap-3">
-              {categories.map((cat) => (
-                <button key={cat.key}
-                  className={`zatra-btn rounded-lg ${activeCategory === cat.key ? "zatra-btn-fill" : ""}`}
-                  onClick={() => setActiveCategory(cat.key)}
-                >
-                  {cat.label}
-                </button>
-              ))}
-            </div>
-          </div>
+
           <div className="">
             <Carousel
               responsive={responsive}
@@ -314,9 +304,9 @@ const ReligiousTabs = () => {
         {/* ================second-section================ */}
         <div className="container space-top">
           <div className='flex  items-center mb-4'>
-            <div className='bg-white border text-webprimary p-3 rounded-full shadow-card me-4 flex items-center justify-center'>
+            {/* <div className='bg-white border text-webprimary p-3 rounded-full shadow-card me-4 flex items-center justify-center'>
               <GiByzantinTemple size={25} />
-            </div>
+            </div> */}
             <h2 className='text-xl md:text-3xl  mb-0 pb-0'>Religious/ Pilgrimage Sites</h2>
           </div>
 
@@ -328,7 +318,7 @@ const ReligiousTabs = () => {
               swipeable
               draggable
               showDots={true}
-              containerClass="pb-4 pt-4"
+              containerClass="pb-5 pt-4"
               itemClass="ps-1 pt-2 pe-4"
               arrows={false}
               renderButtonGroupOutside={false}
@@ -341,24 +331,7 @@ const ReligiousTabs = () => {
           </div>
         </div>
 
-        <style jsx>
-
-          {`
-             .react-multi-carousel-dot button{
-            background-color: #bfc3c5;
-            border-color: #bfc3c5;
-          }
-
-              .react-multi-carousel-dot-list{
-                bottom:0;
-              }
-                .react-multi-carousel-track{
-                  top: -8px;
-                }
-
-          `}
-
-        </style>
+    
 
       </section>
     </>

@@ -23,6 +23,10 @@ import Handicrafts from "../GangaDarshan/Handicrafts";
 import InvestmentOpportunities from "../GangaDarshan/InvestmentOpportunities";
 import ServiceProvider from "../GangaDarshan/ServiceProvider";
 import TreatmentWellness from "./TreatmentWellness";
+import TradeCommerce from "./TradeCommerce";
+import Tourism from "./Tourism";
+import TraditionArts from "./TraditionArts";
+import TasteCulinary from "./TasteCulinary";
 
 
 const cardsData = [
@@ -309,9 +313,9 @@ const MainCategories = [
 ];
 
 const ExploreCategoriesSection = () => {
-  const [expandedCard, setExpandedCard] = useState(3);
+  const [expandedCard, setExpandedCard] = useState(1);
   const [parentCategory, setParentCategory] = useState("Trade & Commerce");
-  const [activeCategory, setActiveCategory] = useState("New Delhi");
+  const [activeCity, setActiveCity] = useState("New Delhi");
   // console.log(parentCategory, "expandedCard")
 
   const ChildCategories = [
@@ -322,7 +326,7 @@ const ExploreCategoriesSection = () => {
 
   ];
 
-  const filteredCards = cardsData.filter((card) => card.category === activeCategory);
+  const filteredCards = cardsData.filter((card) => card.category === activeCity);
 
   const responsive = {
     desktop: {
@@ -354,18 +358,18 @@ const ExploreCategoriesSection = () => {
   function renderContent() {
     switch (parentCategory) {
       case "Trade & Commerce":
-        return <> <TradeOpportunities />, <Handicrafts />, <InvestmentOpportunities /> </>
+        return <><TradeCommerce activeCity={activeCity} />,  </>
 
       case "Tourism & Sightseeing":
-        return <ReligiousTabs />;
+        return <Tourism activeCity={activeCity} />;
       case "Explore":
-        return <ReligiousTabs />;
+        return <ReligiousTabs activeCity={activeCity} />;
       case "Treatment & Wellness":
-        return <TreatmentWellness />;
+        return <TreatmentWellness activeCity={activeCity} />;
       case "Tradition & Arts":
-        return <><MajorExports />, <MajorCrops />, <AgroProducts /></>
+        return <TraditionArts activeCity={activeCity} />
       case "Taste & Culinary":
-        return <NearbyShops />;
+        return <TasteCulinary activeCity={activeCity} />;
       default:
         return null;
     }
@@ -434,30 +438,23 @@ const ExploreCategoriesSection = () => {
           })}
         </div>
       </div>
-      <style jsx>{`
-        @keyframes fadeIn {
-          from { opacity: 0; }
-          to { opacity: 1; }
-        }
-        .animate-fade-in {
-          animation: fadeIn 0.5s ease-out;
-        }
-      `}</style>
 
 
-      <div className=" space-top">
-        {/* <div className="flex flex-wrap items-center ">
+
+      <div className="container space-top">
+        <div className="flex flex-wrap items-center ">
           <div className=" medical-tab-buttons mb-4 flex flex-wrap gap-3">
             {ChildCategories.map((cat) => (
               <button key={cat.key}
-                className={`zatra-btn rounded-lg ${activeCategory === cat.key ? "zatra-btn-fill" : ""}`}
-                onClick={() => setActiveCategory(cat.key)}
+                className={`zatra-btn rounded-lg ${activeCity === cat.key ? "zatra-btn-fill" : ""}`}
+                onClick={() => setActiveCity(cat.key)}
               >
                 {cat.label}
               </button>
             ))}
           </div>
-        </div> */}
+        </div>
+
         {renderContent()}
       </div>
     </section>

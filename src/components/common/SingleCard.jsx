@@ -8,14 +8,16 @@ const SingleCard = ({ data = [], buttonText }) => {
         {/* Image */}
 
 
-
-        <div className='p-5'>
-          <img
-            src={data?.img || null}
-            alt="Package"
-            className="w-full min-h-48 object-cover"
-          />
-        </div>
+        {data?.img ?
+          <div className='p-5'>
+            <img
+              src={data?.img || null}
+              alt="Package"
+              className="w-full min-h-48 object-cover"
+            />
+          </div>
+          : null
+        }
         {/* Content */}
         <div className="p-5">
           {/* Package Name */}
@@ -39,6 +41,16 @@ const SingleCard = ({ data = [], buttonText }) => {
             <p className={`text-webPara ${data?.subtitle ? " pb-1" : ""} `}>{data?.subtitle || null}</p>
             <p className="text-webPara text-sm">{data?.shop || null}</p>
           </div>
+          {data?.listing ?
+            <div className='mb-4'>
+              <ul>
+                {data?.listing?.map((item, index) => (
+                  <li key={index} className="text-webPara text-sm">{item}</li>
+                ))}
+              </ul>
+            </div>
+            : null
+          }
 
           {/* Call Now Button */}
           <button className="w-full bg-webprimary hover:bg-[#005f8d] text-white font-semibold py-2 rounded-lg transition-colors">
