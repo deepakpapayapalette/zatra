@@ -21,9 +21,9 @@ const SingleCard = ({ data = [], buttonText }) => {
         {/* Content */}
         <div className="p-5">
           {/* Package Name */}
-          {data.title ?
+          {data.title || data?.name ?
             <h2 className="text-2xl font-semibold text-gray-900 mb-2">
-              {data?.title || null}
+              {data?.title || data?.name || null}
             </h2>
             : null
           }
@@ -38,7 +38,7 @@ const SingleCard = ({ data = [], buttonText }) => {
 
           {/* Shop Details */}
           <div className="mb-4">
-            <p className={`text-webPara ${data?.subtitle ? " pb-1" : ""} `}>{data?.subtitle || null}</p>
+            <p className={`text-webPara ${data?.subtitle || data?.category ? " pb-1" : ""} `}>{data?.subtitle || data?.category || null}</p>
             <p className="text-webPara text-sm">{data?.shop || null}</p>
           </div>
           {data?.listing ?

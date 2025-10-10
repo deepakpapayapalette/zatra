@@ -14,7 +14,7 @@ import footerBg from "../../assets/images/website/footer-bg.jpg";
 const Footer = () => {
   return (
     <footer
-      className=" bg-cover bg-center bg-no-repeat text-white pb-4 md:pt-16 relative mt-5 md:mt-12"
+      className=" bg-cover bg-center bg-no-repeat text-white pb-4 pt-8 md:pt-16 relative space-top"
       style={{ backgroundColor: "#000000cc", backgroundImage: `url(${footerBg})`, }} // fallback overlay if no image
     >
       <div className="absolute inset-0 bg-black/60"></div>
